@@ -1,7 +1,7 @@
 Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-9127-417c-8b55-ab5a4333674e.gif) My name is asdiffada
 ==================================================================================================================================
 
-* I'm currently unemployed
+I'm currently unemployed
 
 
 # 💻 Tech Stack:
@@ -16,3 +16,31 @@ Hi ![](https://user-images.githubusercontent.com/18350557/176309783-0785949b-912
 <a href="http://www.github.com/asdiffada"><img src="https://github-readme-streak-stats.herokuapp.com/?user=asdiffada&stroke=ffffff&background=27272a&ring=ffffff&fire=ffffff&currStreakNum=ffffff&currStreakLabel=ffffff&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a>
 
 <a href="https://github.com/asdiffada" align="left"><img src="https://github-readme-stats.vercel.app/api/top-langs/?username=asdiffada&langs_count=10&title_color=ffffff&text_color=ffffff&icon_color=facc15&bg_color=27272a&hide_border=true&locale=en&custom_title=Top%20%Languages" alt="Top Languages" /></a>
+
+name: Generate Snake Animation
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # update tiap hari
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake.gif
+
+      - name: Push Snake Animation
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: github-actions[bot]
+          author_email: github-actions[bot]@users.noreply.github.com
+          message: "generate snake animation"
+          add: "dist/*"
+
+![GitHub Snake Animation](./dist/github-snake.svg)
