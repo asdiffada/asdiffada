@@ -33,17 +33,5 @@ I'm currently unemployed
         100% { opacity: 0; transform: scale(3); }
       }
     </style>
-
-    <rect x="20" y="20" width="10" height="10" class="box" style="animation-delay:0s"/>
-    <rect x="40" y="20" width="10" height="10" class="box" style="animation-delay:0.2s"/>
-    <rect x="60" y="20" width="10" height="10" class="box" style="animation-delay:0.4s"/>
-    <rect x="80" y="20" width="10" height="10" class="box" style="animation-delay:0.6s"/>
-    <rect x="100" y="20" width="10" height="10" class="box" style="animation-delay:0.8s"/>
-
-    <rect x="20" y="40" width="10" height="10" class="box" style="animation-delay:1s"/>
-    <rect x="40" y="40" width="10" height="10" class="box" style="animation-delay:1.2s"/>
-    <rect x="60" y="40" width="10" height="10" class="box" style="animation-delay:1.4s"/>
-    <rect x="80" y="40" width="10" height="10" class="box" style="animation-delay:1.6s"/>
-    <rect x="100" y="40" width="10" height="10" class="box" style="animation-delay:1.8s"/>
   </svg>
 </p>
